@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Create an S3 bucket
+    s3: aws_access_key=AKIAVF5EXZKTWF35CZEC aws_secret_key=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 bucket=bucket object=/development mode=create permission=public-read region=ap-south-1
